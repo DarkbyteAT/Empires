@@ -617,7 +617,7 @@ public class PlayerHandler extends DataHandler {
 			
 			if(conf.isConfigurationSection(player)) {
 				long playTime = getPlayerLastPlayedTime(UUID.fromString(player));
-				long timeDiff = (System.currentTimeMillis() - playTime)/(86400000);
+				long timeDiff = (System.currentTimeMillis() - playTime)/(345600000);
 				
 				if(timeDiff >= 20) {//20 days
 					//they're inactive
