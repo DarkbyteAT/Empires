@@ -60,11 +60,13 @@ public class AllyChat implements Channel {
 		
 		return true;
 	}
-
-	@Override
+	
+	//Removed addWorld() function, unused
+	/*
 	public void addWorld(String arg0) {
 		
 	}
+	*/
 
 	@Override
 	public void announce(String arg0) {
@@ -95,7 +97,7 @@ public class AllyChat implements Channel {
 			arg0 = arg0.replace("{sender}", "%1$s");
 		}
 		
-		arg0 = arg0.replaceAll("(?i)&([a-fklmno0-9])", "ง$1");
+		arg0 = arg0.replaceAll("(?i)&([a-fklmno0-9])", "ยง$1");
 		
 		return arg0;
 	}
@@ -131,7 +133,7 @@ public class AllyChat implements Channel {
 			format = format.replace("{groupprefix}", "");
 			format = format.replace("{groupsuffix}", "");
 		}
-		format = format.replaceAll("(?i)&([a-fklmno0-9])", "ง$1");
+		format = format.replaceAll("(?i)&([a-fklmno0-9])", "ยง$1");
 		return format;
 	}
 
@@ -501,6 +503,8 @@ public class AllyChat implements Channel {
 		return true;
 	}
 
+	//Removed functions
+	/*
 	@Override
 	public void removeWorld(String arg0) {
 	}
@@ -571,5 +575,6 @@ public class AllyChat implements Channel {
 	@Override
 	public void setWorlds(Set<String> arg0) {
 	}
+    */
 
 }
