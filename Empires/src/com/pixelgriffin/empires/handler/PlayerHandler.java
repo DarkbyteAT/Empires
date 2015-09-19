@@ -619,8 +619,8 @@ public class PlayerHandler extends DataHandler {
 				long playTime = getPlayerLastPlayedTime(UUID.fromString(player));
 				long timeDiff = (System.currentTimeMillis() - playTime)/(86400000);
 				
-				if(timeDiff >= 20) {//20 days
-					//they're inactive
+				if(timeDiff >= 28) { //4 weeks
+					//If they're inactive
 					try {
 						removeDormantPlayer(UUID.fromString(player));
 					} catch (EmpiresJoinableDoesNotExistException e) {
