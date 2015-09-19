@@ -619,7 +619,7 @@ public class PlayerHandler extends DataHandler {
 				long playTime = getPlayerLastPlayedTime(UUID.fromString(player));
 				long timeDiff = (System.currentTimeMillis() - playTime)/(86400000);
 				
-				if(timeDiff >= 20) {//20 days
+				if(timeDiff >= 28) {//28 days
 					//they're inactive
 					try {
 						removeDormantPlayer(UUID.fromString(player));
